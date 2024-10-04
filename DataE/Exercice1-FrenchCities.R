@@ -157,8 +157,8 @@ Dataset=Dataset[,-1] #Supprimer la premiere variable
  sd(Dataset$NO2) # Donne l'ecart type de la variale
   
  var(Dataset$NO2) # Donne la varaiance de la variale
- 
-quantile(Dataset$TEMP) # Donne tous les quantiles de la variable.
+       
+quantile(Dataset$TEMP)  # Donne tous les quantiles de la variable.
 
 # POur calculer un quantile pr?cise 
   
@@ -178,6 +178,7 @@ quantile(Dataset$TEMP) # Donne tous les quantiles de la variable.
     ##############################################################################
   
   #### Et encore quelque op?ration :
+  Dataset$NO2
   
  Dataset$NO2 +10 # Pour ajouter 10 ? chaque composante de NO2.
   
@@ -197,7 +198,7 @@ quantile(Dataset$TEMP) # Donne tous les quantiles de la variable.
   Dataset$TEMP
   
   #La variable TEMP est quantitatif continue.
-  
+  #hist(Dataset$NO2)
   hist(Dataset$TEMP, main='histogramme de la variable TEMPS',xlab='TEMP',ylab='freq',col='red')
   
   # Xlab et ylab pour nomer les axes X et Y.
@@ -217,6 +218,8 @@ quantile(Dataset$TEMP) # Donne tous les quantiles de la variable.
   # Le nouveau tableau est alors :
   
   Dataset1=subset(Dataset,TEMP>0)
+  Dataset1
+  #boxplot(Dataset1$TEMP,main='Box Plot',xlab='TEMP',ylab='freq',col='pink')
   
   # alors le nouveau jeu des donn?es Dataset1 contient 31 observations au lieu de 32.
   
